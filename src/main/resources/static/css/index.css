@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Sono:wght@500&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+/* *** PRINCIPAL *** */
+body,
+html {
+    /*height: 100%;*/
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px;
+
+    font-family: "Source Code Pro", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.s-total-normal {
+    /* background-color: beige;
+         height: 100%;*/
+    width: 50rem;
+    margin: 3rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.s-total-rest {
+    /* background-color: red;
+   height: 100%;*/
+    width: 50rem;
+    display: flex;
+    align-items: center;
+    padding-bottom: 4rem;
+}
+
+/* *** IZQUIERDA *** */
+.d-izq {
+    height: 70%;
+    width: 35%;
+    margin: 0px;
+    padding-bottom: 4rem;
+    /*background-color: aqua;*/
+}
+
+img {
+    width: 1.5rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin: 2.5rem 0rem 2.5rem 0rem;
+    font-weight: 600;
+    background-color: rgba(211, 211, 211, 0.39);
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+.activado {
+    border: solid 2px rgba(0, 191, 255, 0.356);
+}
+
+li:active {
+    color: deepskyblue;
+}
+
+
+.h2-opciones {
+    padding-left: 1rem;
+}
+
+/* *** DERECHA *** */
+.d-der {
+    height: 70%;
+    width: 65%;
+    margin: 0px;
+    /*background-color: beige;*/
+}
+
+.contenedor {
+    /*background-color: khaki;*/
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor-metodo {
+    margin-top: 2rem;
+    height: 20%;
+    width: 70%;
+    background-color: rgba(211, 211, 211, 0.39);
+    border-radius: 2rem;
+    border: 3px solid;
+    display: flex;
+}
+
+
+.h2-tabla {
+    margin: 0px;
+    padding-top: 1rem;
+}
+
+.parte1-left {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parte1-right {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+h4 {
+    font-size: larger;
+    padding-left: 1rem;
+}
+
+h5 {
+    font-size: medium;
+}
+
+.no-mostrar {
+    display: none;
+}

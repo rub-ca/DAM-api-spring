@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/edit.css}"/>
+    <!--<link rel="stylesheet" href="../static/css/index.css">-->
+    <title>Title</title>
+</head>
+
+<body>
+<a href="../">VOLVER</a>
+
+
+<section class="s-total">
+    <!-- *** *** IZQUIERDA *** *** -->
+    <div class="d-izq">
+        <ul>
+            <h2 class="h2-opciones">Opciones</h2>
+
+            <li id="li-put" class="activado">
+                <img src="/img/server.svg" alt="">
+                &emsp;Put
+            </li>
+
+            <li id="li-post">
+                <img src="/img/server.svg" alt="">
+                &emsp;Post
+            </li>
+
+            <li id="li-delete">
+                <img src="/img/server.svg" alt="">
+                &emsp;Delete
+            </li>
+        </ul>
+    </div>
+
+    <!-- *** *** DERECHA *** *** -->
+    <div id="seccion-employees" class="d-der">
+        <div class="contenedor">
+            <!--Formulario PUT-->
+            <form id="form-put" th:method="put" action="/edit/job">
+                <label for="pid"> id a modificar: </label>
+                <input type="text" name="pid" id="pid">
+
+                <label for="pjob_title"> job_title: </label>
+                <input type="text" name="pjob_title" id="pjob_title">
+
+                <label for="pmin_salary"> min_salary: </label>
+                <input type="text" name="pmin_salary" id="pmin_salary">
+
+                <label for="pmax_salary"> max_salary: </label>
+                <input type="text" name="pmax_salary" id="pmax_salary">
+
+                <input type="submit" value="Modificar trabajo">
+            </form>
+
+            <!--Formulario POST-->
+            <form id="form-post" class="no-mostrar" method="post" action="/edit/job">
+                <label for="job_title"> job_title: </label>
+                <input type="text" name="job_title" id="job_title">
+
+                <label for="min_salary"> min_salary: </label>
+                <input type="text" name="min_salary" id="min_salary">
+
+                <label for="max_salary"> max_salary: </label>
+                <input type="text" name="max_salary" id="max_salary">
+
+                <input type="submit" value="Añadir trabajo">
+            </form>
+
+            <!--Formulario DELETE-->
+            <form id="form-delete" class="no-mostrar" th:method="delete" action="/edit/job">
+                <label for="idborrar"> id a borrar: </label>
+                <input type="text" name="idborrar" id="idborrar">
+
+                <input type="submit" value="Borrar trabajo">
+            </form>
+
+        </div>
+    </div>
+</section>
+
+<script src="/js/edit.js"></script>
+</body>
+
+</html>

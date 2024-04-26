@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/show.css}"/>
+    <!--<link rel="stylesheet" href="../static/css/index.css">-->
+    <title>Title</title>
+</head>
+<body>
+<a href="../">VOLVER</a>
+
+<h2>'jobs'</h2>
+
+<div class="tabla">
+    <div class="fila cabecera">
+        <div class="casilla">job_id</div>
+        <div class="casilla">job_title</div>
+        <div class="casilla">min_salary</div>
+        <div class="casilla">max_salary</div>
+    </div>
+
+    <div class="fila" th:each="j: ${jobs}"
+         th:style="${jStat.even}? 'background-color: rgba(211, 211, 211, 0.39);'">
+        <div class="casilla" th:text="${j.job_id}"></div>
+        <div class="casilla" th:text="${j.job_title}"></div>
+        <div class="casilla" th:text="${j.min_salary}"></div>
+        <div class="casilla" th:text="${j.max_salary}"></div>
+    </div>
+</div>
+
+</body>
+</html>

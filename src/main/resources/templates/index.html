@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/index.css}"/>
+    <!--<link rel="stylesheet" href="../static/css/index.css">-->
+    <title>Document</title>
+</head>
+
+<body>
+<!-- *** *** MENSAJE TH *** *** -->
+<p th:if="${message != null}" th:text="${message}"></p>
+
+<!-- *** *** EDITAR NORMAL *** *** -->
+<section class="s-total-normal">
+    <!-- *** *** IZQUIERDA *** *** -->
+    <div class="d-izq">
+        <ul>
+            <h2 class="h2-opciones">Opciones</h2>
+
+            <li id="li-editar" class="activado">
+                <img src="/img/pencil.svg" alt=""> &emsp; Editar jobs
+            </li>
+
+            <li id="li-mostrar" class="activado">
+                <img src="/img/show.svg" alt="">&emsp; Mostrar jobs
+            </li>
+        </ul>
+    </div>
+
+    <!-- *** *** DERECHA *** *** -->
+    <div class="d-der">
+
+    </div>
+</section>
+
+
+<!-- *** *** REST *** *** -->
+<section class="s-total-rest">
+    <!-- *** *** IZQUIERDA *** *** -->
+    <div class="d-izq">
+        <ul>
+            <h2 class="h2-opciones">REST (postman)</h2>
+
+            <li id="li-emp" class="activado">
+                <img src="/img/server.svg" alt="">
+                &emsp;Employees
+            </li>
+
+            <li id="li-dep">
+                <img src="/img/server.svg" alt="">
+                &emsp;Departments
+            </li>
+
+            <li id="li-job">
+                <img src="/img/server.svg" alt="">
+                &emsp;Jobs
+            </li>
+
+            <li id="li-det">
+                <img src="/img/link.svg" alt="">
+                &emsp;Detailed
+            </li>
+        </ul>
+    </div>
+
+    <!-- *** *** DERECHA *** *** -->
+    <div id="seccion-employees" class="d-der">
+        <div class="contenedor">
+            <!--Titulo seccion-->
+            <!--<h2 class="h2-tabla">Employees</h2>-->
+
+            <!--Metodos-->
+            <div class="contenedor-metodo met-get">
+                <div class="parte1-left">
+                    <h4>GET:</h4>
+                </div>
+                <div class="parte1-right">
+                    <h5 class="solo-ruta">/employees</h5>
+                    <h5 class="id-ruta">/employees/{id}</h5>
+                </div>
+            </div>
+            <div class="contenedor-metodo met-put">
+                <div class="parte1-left">
+                    <h4>PUT:</h4>
+                </div>
+                <div class="parte1-right">
+                    <h5 class="id-ruta">/employees/{id}</h5>
+                </div>
+            </div>
+            <div class="contenedor-metodo met-post">
+                <div class="parte1-left">
+                    <h4>POST:</h4>
+                </div>
+                <div class="parte1-right">
+                    <h5 class="solo-ruta">/employees</h5>
+                </div>
+            </div>
+            <div class="contenedor-metodo met-delete">
+                <div class="parte1-left">
+                    <h4>DELETE:</h4>
+                </div>
+                <div class="parte1-right">
+                    <h5 class="id-ruta">/employees/{id}</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script src="/js/index.js"></script>
+<!--<script src="../static/js/index.js"></script>-->
+</body>
+
+</html>
